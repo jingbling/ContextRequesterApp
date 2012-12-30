@@ -2,4 +2,13 @@
 <resources>
     <string name="app_name">ContextRequesterApp</string>
     <string name="returned_context">context</string>
+    <string name="title_activity_display_message">DataCollection</string>
+    <string-array name="classifier_choice_array">
+        <item>LibSVM</item>
+        <item>DecisionTree</item>
+        <item>GMM</item>
+        <item>Others</item>
+        <item>ToBe</item>
+        <item>Added</item>
+    </string-array>
 </resources>

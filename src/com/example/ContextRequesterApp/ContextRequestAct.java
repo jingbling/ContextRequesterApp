@@ -6,10 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.*;
+import android.os.Process;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.*;
 import org.jingbling.ContextEngine.IContextService;
 
 import java.util.ArrayList;
@@ -21,10 +21,20 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
     private Button bUnbindServiceBtn;
     private Button bLaunchContextActBtn;
     private Button bLaunchTrainingActBtn;
+    private Button bCloseAppBtn;
+
+    private Spinner bContextSelection;
+
+    private CheckBox featureSelectBox1;
+    private CheckBox featureSelectBox2;
+    private CheckBox featureSelectBox3;
+    private CheckBox featureSelectBox4;
+    private int numCheckBoxes = 4;
 
     private IContextService targetContextService;
     private Bundle appThreadArgs;
     private Message appThreadMsg;
+    private ArrayList<String> stringArrayInput = new ArrayList<String>();
 
     // Temp variables for debugging
     String ACT_TAG="ContextRequestAct";
@@ -63,9 +73,9 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
             if ( args.containsKey("context_case") ) {
                 remoteContextCall(args.getStringArrayList("FeaturesList"), args.getString("ClassifierName"), args.getString("ContextGroup"));
             }
-//            else if ( args.containsKey("fibsum") ) {
-//                remoteActivityCall();
-//            }
+            else if ( args.containsKey("train_data") ) {
+                remoteActivityCall(args.getStringArrayList("FeaturesList"), args.getString("ContextGroup"));
+            }
         }
     }
 
@@ -92,6 +102,16 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
         bLaunchTrainingActBtn = (Button)findViewById(R.id.btnTrainData);
         bLaunchTrainingActBtn.setOnClickListener(this);
         bLaunchTrainingActBtn.setEnabled(false);
+
+        bCloseAppBtn = (Button)findViewById(R.id.btnCloseApp);
+        bCloseAppBtn.setOnClickListener(this);
+
+        bContextSelection = (Spinner) findViewById(R.id.context_spinner);
+
+        featureSelectBox1 = (CheckBox)findViewById(R.id.feature_checkbox1);
+        featureSelectBox2 = (CheckBox)findViewById(R.id.feature_checkbox2);
+        featureSelectBox3 = (CheckBox)findViewById(R.id.feature_checkbox3);
+        featureSelectBox4 = (CheckBox)findViewById(R.id.feature_checkbox4);
 
         HandlerThread hthr =
                 new HandlerThread("StartedContextLooperService2Thread",
@@ -123,35 +143,62 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                 break;
             case R.id.btnGetContext:
 
+                // Use selected variables to pass arguments to remote call
+                // Features List
+
                 appThreadMsg = appServiceHandler.obtainMessage();
                 appThreadArgs.clear();
                 appThreadArgs.putBoolean("context_case", true);
 
                 // For now, hard-code arguments to test remote call
-                ArrayList<String> stringArrayInput = null;
-//                stringArrayInput.add(0,"accelx");
-//                stringArrayInput.add(1,"accely");
-//                stringArrayInput.add(2,"accelz");
+                stringArrayInput.clear();
+                // Add checked features to array list
+                if (featureSelectBox1.isChecked())
+                    stringArrayInput.add(featureSelectBox1.getText().toString());
+                if (featureSelectBox2.isChecked())
+                    stringArrayInput.add(featureSelectBox2.getText().toString());
+                if (featureSelectBox3.isChecked())
+                    stringArrayInput.add(featureSelectBox3.getText().toString());
+                if (featureSelectBox4.isChecked())
+                    stringArrayInput.add(featureSelectBox4.getText().toString());
+
                 appThreadArgs.putStringArrayList("FeaturesList", stringArrayInput);
-                appThreadArgs.putString("ClassifierName","libSVM");
+                appThreadArgs.putString("ClassifierName",bContextSelection.getSelectedItem().toString());
                 appThreadArgs.putString("ContextGroup","activity");
 
                 appThreadMsg.obj = appThreadArgs;
                 appServiceHandler.sendMessage(appThreadMsg);
                 break;
-//            case R.id.btnTrainData:
-//                //long fibn = Long.parseLong(mNEdtTxt.getText().toString());
-//                //remoteFibonacciSum(fibn);
-//                //mFibThread = new Thread(null, new FibSumResponseWorker(),
-//                //		"FibSumResponseWorker");
-//                //mFibThread.start();
-//                mThreadMsg = mServiceHandler.obtainMessage();
-//                mThreadArgs.clear();
-//                mThreadArgs.putBoolean("fibsum", true);
-//                mThreadArgs.putLong("n", Long.parseLong(mNEdtTxt.getText().toString()));
-//                mThreadMsg.obj = mThreadArgs;
-//                mServiceHandler.sendMessage(mThreadMsg);
-//                break;
+            case R.id.btnTrainData:
+//
+                // Use selected variables to pass arguments to remote call
+                // Features List
+
+                appThreadMsg = appServiceHandler.obtainMessage();
+                appThreadArgs.clear();
+                appThreadArgs.putBoolean("train_data", true);
+
+                // For now, hard-code arguments to test remote call
+                stringArrayInput.clear();
+                // Add checked features to array list
+                if (featureSelectBox1.isChecked())
+                    stringArrayInput.add(featureSelectBox1.getText().toString());
+                if (featureSelectBox2.isChecked())
+                    stringArrayInput.add(featureSelectBox2.getText().toString());
+                if (featureSelectBox3.isChecked())
+                    stringArrayInput.add(featureSelectBox3.getText().toString());
+                if (featureSelectBox4.isChecked())
+                    stringArrayInput.add(featureSelectBox4.getText().toString());
+
+                appThreadArgs.putStringArrayList("FeaturesList", stringArrayInput);
+                appThreadArgs.putString("ContextGroup","activity");
+
+                appThreadMsg.obj = appThreadArgs;
+                appServiceHandler.sendMessage(appThreadMsg);
+                break;
+            case R.id.btnCloseApp:
+                Process.killProcess(Process.myPid());
+                break;
 
         }
     }
@@ -177,17 +224,17 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
         }
     }
 
-    private void remoteActivityCall(long n) {
-//        try {
-//            long v = targetContextService.fibonacciSum(n);
-//            Toast.makeText(getApplicationContext(),
-//                    "fibsum="+v,
-//                    Toast.LENGTH_LONG).show();
-//        }
-//        catch ( RemoteException ex ) {
-//            Toast.makeText(getApplicationContext(),
-//                    ex.toString(),
-//                    Toast.LENGTH_LONG).show();
-//        }
+    private void remoteActivityCall(List<String> featuresToUse, String contextGroup) {
+        try {
+            targetContextService.gatherTrainingData(featuresToUse, contextGroup);
+            Toast.makeText(getApplicationContext(),
+                    "Launch",
+                    Toast.LENGTH_LONG).show();
+        }
+        catch ( RemoteException ex ) {
+            Toast.makeText(getApplicationContext(),
+                    ex.toString(),
+                    Toast.LENGTH_LONG).show();
+        }
     }
 }

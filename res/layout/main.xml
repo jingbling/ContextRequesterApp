@@ -31,6 +31,55 @@
                 android:textSize="10dp"
                 />
 
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Features to use:"
+                />
+        <CheckBox android:id="@+id/feature_checkbox1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="accelerometer_x"/>
+        <CheckBox android:id="@+id/feature_checkbox2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="accelerometer_y"/>
+        <CheckBox android:id="@+id/feature_checkbox3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="accelerometer_z"/>
+        <CheckBox android:id="@+id/feature_checkbox4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="gravitySensor"/>
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Classifier to use for returning context:"
+                />
+        <Spinner
+                android:id="@+id/context_spinner"
+                android:layout_width="fill_parent"
+                android:entries="@array/classifier_choice_array"
+                android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
         <Button
                 android:id="@+id/btnGetContext"
                 android:layout_width="wrap_content"
@@ -38,7 +87,19 @@
                 android:text=" Request Context "
                 android:textSize="10dp"
                 />
+    </LinearLayout>
 
+    <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="more options:"
+                />
         <Button
                 android:id="@+id/btnTrainData"
                 android:layout_width="wrap_content"
@@ -46,7 +107,13 @@
                 android:text=" Training Mode "
                 android:textSize="10dp"
                 />
-
+        <Button
+            android:id="@+id/btnCloseApp"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="   Exit    "
+            android:textSize="10dp"
+            />
     </LinearLayout>
 
 </LinearLayout>
