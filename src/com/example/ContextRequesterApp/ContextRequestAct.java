@@ -9,7 +9,10 @@ import android.os.*;
 import android.os.Process;
 import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Spinner;
+import android.widget.Toast;
 import org.jingbling.ContextEngine.IContextService;
 
 import java.util.ArrayList;
@@ -226,7 +229,7 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
 
     private void remoteActivityCall(List<String> featuresToUse, String contextGroup) {
         try {
-            targetContextService.gatherTrainingData(featuresToUse, contextGroup);
+            targetContextService.gatherTrainingData(featuresToUse, contextGroup, "trainingDataFile.txt");
             Toast.makeText(getApplicationContext(),
                     "Launch",
                     Toast.LENGTH_LONG).show();
