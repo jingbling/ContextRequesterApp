@@ -70,9 +70,14 @@
                 android:text="Select Classifier to use for returning context:"
                 />
         <Spinner
-                android:id="@+id/context_spinner"
+                android:id="@+id/classifier_spinner"
                 android:layout_width="fill_parent"
                 android:entries="@array/classifier_choice_array"
+                android:layout_height="wrap_content" />
+        <Spinner
+                android:id="@+id/context_spinner"
+                android:layout_width="fill_parent"
+                android:entries="@array/context_choice_array"
                 android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout

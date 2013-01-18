@@ -26,6 +26,7 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
     private Button bLaunchTrainingActBtn;
     private Button bCloseAppBtn;
 
+    private Spinner bClassifierSelection;
     private Spinner bContextSelection;
 
     private CheckBox featureSelectBox1;
@@ -109,6 +110,7 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
         bCloseAppBtn = (Button)findViewById(R.id.btnCloseApp);
         bCloseAppBtn.setOnClickListener(this);
 
+        bClassifierSelection = (Spinner) findViewById(R.id.classifier_spinner);
         bContextSelection = (Spinner) findViewById(R.id.context_spinner);
 
         featureSelectBox1 = (CheckBox)findViewById(R.id.feature_checkbox1);
@@ -166,8 +168,8 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                     stringArrayInput.add(featureSelectBox4.getText().toString());
 
                 appThreadArgs.putStringArrayList("FeaturesList", stringArrayInput);
-                appThreadArgs.putString("ClassifierName",bContextSelection.getSelectedItem().toString());
-                appThreadArgs.putString("ContextGroup","activity");
+                appThreadArgs.putString("ClassifierName",bClassifierSelection.getSelectedItem().toString());
+                appThreadArgs.putString("ContextGroup",bContextSelection.getSelectedItem().toString());
 
                 appThreadMsg.obj = appThreadArgs;
                 appServiceHandler.sendMessage(appThreadMsg);
