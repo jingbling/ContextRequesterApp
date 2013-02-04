@@ -13,6 +13,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+        <service android:name="org.jingbling.ContextEngine.ContextService"
+                 android:enabled="true">
+            <intent-filter>
+                <action android:name="org.jingbling.ContextEngine.ContextService" />
+            </intent-filter>
+        </service>
     </application>
 </manifest> 
