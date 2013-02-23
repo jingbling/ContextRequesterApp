@@ -13,6 +13,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class ContextRequestAct extends Activity implements View.OnClickListener {
     // declare variables
     private Button bBindServiceBtn;
@@ -24,6 +26,15 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
     private Spinner bClassifierSelection;
     private Spinner bContextSelection;
 
+    // initialize variables needed for training data
+    private ArrayList featuresToUse=null;
+    private ArrayList contextLabels=null;
+    private String TrainingFileName=null;
+    private String TrainContextGroup=null;
+    private Bundle bundleServiceInput = new Bundle();
+    private Intent InputIntent;
+    private JSONObject jsonInput;
+    private Messenger ReturnMessenger;
     /**
      * Called when the activity is first created.
      */
@@ -54,6 +65,12 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
         bClassifierSelection = (Spinner) findViewById(R.id.classifier_spinner);
         bContextSelection = (Spinner) findViewById(R.id.context_spinner);
 
+        // Setup inputs and intents for calling service
+        bundleServiceInput = new Bundle();
+        InputIntent = new Intent("org.jingbling.ContextEngine.ContextService");
+        // Create a new Messenger for the communication back
+        ReturnMessenger = new Messenger(handler);
+        InputIntent.putExtra("MESSENGER", ReturnMessenger);
     }
 
 
@@ -61,9 +78,19 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
         public void handleMessage(Message message) {
             Bundle output = message.getData();
             if (output != null) {
-                Toast.makeText(getApplicationContext(),
-                        "Classified: " + output.getString("label"), Toast.LENGTH_LONG)
-                        .show();
+                if (output.getInt("return") == 0) {
+                    Toast.makeText(getApplicationContext(),
+                            "Classified: " + output.getString("label"), Toast.LENGTH_LONG)
+                            .show();
+                } else {
+                    // classifier was not found, return message and get bundled data
+                    featuresToUse=output.getStringArrayList("features");
+                    contextLabels=output.getStringArrayList("contextLabels");
+                    TrainContextGroup=output.getString("contextGroup");
+                    Toast.makeText(getApplicationContext(),
+                            "Error getting classifier, please train data", Toast.LENGTH_LONG)
+                            .show();
+                }
             } else {
                 Toast.makeText(getApplicationContext(), "Classification failed",
                         Toast.LENGTH_LONG).show();
@@ -92,35 +119,53 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                 break;
             case R.id.btnGetContext:
                 // Pass intent to service
-                Bundle bundleInput = new Bundle();
-                Intent InputIntent = new Intent("org.jingbling.ContextEngine.ContextService");
 
                 // Create JSON format as input
-                JSONObject jsonInput = new JSONObject();
+                jsonInput = new JSONObject();
                 try {
                     jsonInput.put("classifier", bClassifierSelection.getSelectedItem().toString());
                     jsonInput.put("contextGroup", bContextSelection.getSelectedItem().toString());
                     JSONArray featuresArray = new JSONArray();
                     // ??? TBR - for now hardcode features used, to be replaced with selectable list
-                    featuresArray.put("AvgFFTx");
-                    featuresArray.put("AvgFFTy");
-                    featuresArray.put("AvgFFTz");
+                    featuresArray.put("accel.FFT");
+//                    featuresArray.put("AvgFFTy");
+//                    featuresArray.put("AvgFFTz");
                     jsonInput.put("features", featuresArray);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
                 Log.v("GETContextButton", jsonInput.toString());
-                bundleInput.putString("JSONInput",jsonInput.toString());
+                bundleServiceInput.putString("JSONInput",jsonInput.toString());
+                bundleServiceInput.putString("action","classify");
+                bundleServiceInput.putLong("period", (long)15000);// classify every 15 seconds
+                bundleServiceInput.putLong("duration", (long)60000); //total duration of 1 minute
 
-                // Create a new Messenger for the communication back
-                Messenger messenger = new Messenger(handler);
-                InputIntent.putExtra("MESSENGER", messenger);
-
-                InputIntent.putExtras(bundleInput);
+                InputIntent.putExtras(bundleServiceInput);
                 startService(InputIntent);
 
                 break;
             case R.id.btnTrainData:
+
+                // Create JSON format as input
+                jsonInput = new JSONObject();
+                try {
+                    jsonInput.put("classifier", bClassifierSelection.getSelectedItem().toString());
+                    jsonInput.put("contextGroup", bContextSelection.getSelectedItem().toString());
+                    JSONArray featuresArray = new JSONArray();
+                    // ??? TBR - for now hardcode features used, to be replaced with selectable list
+                    featuresArray.put("accel.FFT");
+//                    featuresArray.put("AvgFFTy");
+//                    featuresArray.put("AvgFFTz");
+                    jsonInput.put("features", featuresArray);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Log.v("GETContextButton", jsonInput.toString());
+                bundleServiceInput.putString("JSONInput",jsonInput.toString());
+                bundleServiceInput.putString("action","train");
+
+                InputIntent.putExtras(bundleServiceInput);
+                startService(InputIntent);
 
                 break;
             case R.id.btnCloseApp:

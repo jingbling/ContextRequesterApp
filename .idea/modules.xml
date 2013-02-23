@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ContextRequesterApp.iml" filepath="$PROJECT_DIR$/ContextRequesterApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../ContextService/ContextService.iml" filepath="$PROJECT_DIR$/../ContextService/ContextService.iml" />
     </modules>
   </component>
 </project>
