@@ -7,7 +7,7 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="This is an activity.  To request ContextService actions, you must first bind to the service:"
+            android:text="This is an activity.  To request ContextService actions, select Options below. When launching for first time, need to initialize fields:"
             />
     <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,69 +17,22 @@
             >
 
         <Button
-                android:id="@+id/btnBindService"
+                android:id="@+id/btnInitService"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:text="   Bind    "
+                android:text="   Initialize    "
                 android:textSize="10dp"
                 />
-        <Button
-                android:id="@+id/btnUnbindService"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:text="   Unbind    "
-                android:textSize="10dp"
-                />
+        <!--<Button-->
+                <!--android:id="@+id/btnUnbindService"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:text="   Unbind    "-->
+                <!--android:textSize="10dp"-->
+                <!--/>-->
 
     </LinearLayout>
-    <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Select Features to use:"
-                />
-        <CheckBox android:id="@+id/feature_checkbox1"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="accelerometer_x"/>
-        <CheckBox android:id="@+id/feature_checkbox2"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="accelerometer_y"/>
-        <CheckBox android:id="@+id/feature_checkbox3"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="accelerometer_z"/>
-        <CheckBox android:id="@+id/feature_checkbox4"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="gravitySensor"/>
-    </LinearLayout>
-    <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-        <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Select Classifier to use for returning context:"
-                />
-        <Spinner
-                android:id="@+id/classifier_spinner"
-                android:layout_width="fill_parent"
-                android:entries="@array/classifier_choice_array"
-                android:layout_height="wrap_content" />
-        <Spinner
-                android:id="@+id/context_spinner"
-                android:layout_width="fill_parent"
-                android:entries="@array/context_choice_array"
-                android:layout_height="wrap_content" />
-    </LinearLayout>
+
     <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -92,19 +45,6 @@
                 android:text=" Request Context "
                 android:textSize="10dp"
                 />
-    </LinearLayout>
-
-    <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:text="more options:"
-                />
         <Button
                 android:id="@+id/btnTrainData"
                 android:layout_width="wrap_content"
@@ -113,12 +53,89 @@
                 android:textSize="10dp"
                 />
         <Button
-            android:id="@+id/btnCloseApp"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text="   Exit    "
-            android:textSize="10dp"
-            />
+                android:id="@+id/btnCloseApp"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="   Exit    "
+                android:textSize="10dp"
+                />
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <!--<CheckBox android:id="@+id/feature_checkbox1"-->
+                  <!--android:layout_width="wrap_content"-->
+                  <!--android:layout_height="wrap_content"-->
+                  <!--android:text="accel.FFT"/>-->
+        <!--<CheckBox android:id="@+id/feature_checkbox2"-->
+                  <!--android:layout_width="wrap_content"-->
+                  <!--android:layout_height="wrap_content"-->
+                  <!--android:text="loc.SomeFeature"/>-->
+<!--        <CheckBox android:id="@+id/feature_checkbox3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="loc.otherFeature"/>-->
+ <!--       <CheckBox android:id="@+id/feature_checkbox4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="gravitySensor"/>-->
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Classifier to use for returning context:"
+                />
+        <Spinner
+                android:id="@+id/classifier_spinner"
+                android:layout_width="match_parent"
+                android:entries="@array/initial_choice_array"
+                android:layout_height="wrap_content" />
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Labels to use for returning context:"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+            <ListView
+                    android:id="@+id/labels_list"
+                    android:layout_width="fill_parent"
+                    android:entries="@array/initial_choice_array"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select features to use for returning context:"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+            <ListView
+                    android:id="@+id/features_list"
+                    android:layout_width="fill_parent"
+                    android:entries="@array/initial_choice_array"
+                    android:layout_height="fill_parent" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

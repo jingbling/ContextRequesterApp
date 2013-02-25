@@ -4,27 +4,29 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.*;
 import android.os.Process;
-import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
-import org.json.JSONArray;
-import org.json.JSONException;
+import android.widget.*;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class ContextRequestAct extends Activity implements View.OnClickListener {
     // declare variables
-    private Button bBindServiceBtn;
+    private Button bInitServiceBtn;
     private Button bUnbindServiceBtn;
     private Button bLaunchContextActBtn;
     private Button bLaunchTrainingActBtn;
     private Button bCloseAppBtn;
 
+    private ListView bFeatureSelection;
     private Spinner bClassifierSelection;
-    private Spinner bContextSelection;
+    private ListView bLabelsSelection;
+
+    // variables for selecting inputs, these need to be initialized by querying service
+    private String[] allowedFeatures;
+    private String[] allowedLabels;
+    private String[] allowedAlgorithms;
 
     // initialize variables needed for training data
     private ArrayList featuresToUse=null;
@@ -45,25 +47,29 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
 
         // Initialize buttons
 
-        bBindServiceBtn = (Button)findViewById(R.id.btnBindService);
-        bBindServiceBtn.setOnClickListener(this);
-
-        bUnbindServiceBtn = (Button)findViewById(R.id.btnUnbindService);
-        bUnbindServiceBtn.setOnClickListener(this);
+        bInitServiceBtn = (Button)findViewById(R.id.btnInitService);
+        bInitServiceBtn.setOnClickListener(this);
+//
+//        bUnbindServiceBtn = (Button)findViewById(R.id.btnUnbindService);
+//        bUnbindServiceBtn.setOnClickListener(this);
 
         bLaunchContextActBtn = (Button)findViewById(R.id.btnGetContext);
         bLaunchContextActBtn.setOnClickListener(this);
-//        bLaunchContextActBtn.setEnabled(false);
+        bLaunchContextActBtn.setEnabled(false);
 
         bLaunchTrainingActBtn = (Button)findViewById(R.id.btnTrainData);
         bLaunchTrainingActBtn.setOnClickListener(this);
-//        bLaunchTrainingActBtn.setEnabled(false);
+        bLaunchTrainingActBtn.setEnabled(false);
 
         bCloseAppBtn = (Button)findViewById(R.id.btnCloseApp);
         bCloseAppBtn.setOnClickListener(this);
 
         bClassifierSelection = (Spinner) findViewById(R.id.classifier_spinner);
-        bContextSelection = (Spinner) findViewById(R.id.context_spinner);
+
+        bLabelsSelection = (ListView) findViewById(R.id.labels_list);
+        bLabelsSelection.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        bFeatureSelection = (ListView) findViewById(R.id.features_list);
+        bFeatureSelection.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         // Setup inputs and intents for calling service
         bundleServiceInput = new Bundle();
@@ -82,13 +88,37 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                     Toast.makeText(getApplicationContext(),
                             "Classified: " + output.getString("label"), Toast.LENGTH_LONG)
                             .show();
-                } else {
-                    // classifier was not found, return message and get bundled data
-                    featuresToUse=output.getStringArrayList("features");
-                    contextLabels=output.getStringArrayList("contextLabels");
-                    TrainContextGroup=output.getString("contextGroup");
+                } else if (output.getInt("return") == 2) {
+                    // if return value is 2, this is an initialization bundle
+                    allowedFeatures =output.getStringArray("allowedFeatures");
+                    allowedLabels=output.getStringArray("allowedLabels");
+                    allowedAlgorithms=output.getStringArray("allowedAlgorithms");
+                    String returnedMessage = output.getString("message");
+
+                    // set lists with return values
+                    ArrayAdapter spinnerArrayAdapter = new ArrayAdapter(getApplicationContext(),
+                            android.R.layout.simple_spinner_dropdown_item, allowedAlgorithms);
+                    bClassifierSelection.setAdapter(spinnerArrayAdapter);
+
+                    ArrayAdapter featuresListAdapter = new ArrayAdapter(getApplicationContext(),
+                            android.R.layout.simple_list_item_checked, allowedFeatures);
+                    bFeatureSelection.setAdapter(featuresListAdapter);
+                    ArrayAdapter labelsListAdapter = new ArrayAdapter(getApplicationContext(),
+                            android.R.layout.simple_list_item_checked, allowedLabels);
+                    bLabelsSelection.setAdapter(labelsListAdapter);
+
+                    //after initializing input values, allow context and training mode to be selected
+                    bLaunchContextActBtn.setEnabled(true);
+                    bLaunchTrainingActBtn.setEnabled(true);
+
                     Toast.makeText(getApplicationContext(),
-                            "Error getting classifier, please train data", Toast.LENGTH_LONG)
+                            returnedMessage, Toast.LENGTH_LONG)
+                            .show();
+                } else {
+                    // classifier was not found or other error, print return message
+                    String returnedMessage = output.getString("message");
+                    Toast.makeText(getApplicationContext(),
+                            returnedMessage, Toast.LENGTH_LONG)
                             .show();
                 }
             } else {
@@ -102,42 +132,35 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch ( v.getId() ) {
-            case R.id.btnBindService:
-//                bindService(new Intent(IContextService.class.getName()),
-//                        appServiceConn, Context.BIND_AUTO_CREATE);
-//                bBindServiceBtn.setEnabled(false);
-//                bLaunchContextActBtn.setEnabled(true);
-//                bLaunchTrainingActBtn.setEnabled(true);
-//                bUnbindServiceBtn.setEnabled(true);
+            case R.id.btnInitService:
+                // initialize values for requesting service classification
+                bundleServiceInput.putString("action","init");
+                InputIntent.putExtras(bundleServiceInput);
+                startService(InputIntent);
+
                 break;
-            case R.id.btnUnbindService:
-//                unbindService(appServiceConn);
-//                bBindServiceBtn.setEnabled(true);
-//                bLaunchContextActBtn.setEnabled(false);
-//                bLaunchTrainingActBtn.setEnabled(false);
-//                bUnbindServiceBtn.setEnabled(false);
-                break;
+//            case R.id.btnBindService:
+////                bindService(new Intent(IContextService.class.getName()),
+////                        appServiceConn, Context.BIND_AUTO_CREATE);
+////                bInitServiceBtn.setEnabled(false);
+////                bLaunchContextActBtn.setEnabled(true);
+////                bLaunchTrainingActBtn.setEnabled(true);
+////                bUnbindServiceBtn.setEnabled(true);
+//                break;
+//            case R.id.btnUnbindService:
+////                unbindService(appServiceConn);
+////                bInitServiceBtn.setEnabled(true);
+////                bLaunchContextActBtn.setEnabled(false);
+////                bLaunchTrainingActBtn.setEnabled(false);
+////                bUnbindServiceBtn.setEnabled(false);
+//                break;
             case R.id.btnGetContext:
                 // Pass intent to service
-
-                // Create JSON format as input
-                jsonInput = new JSONObject();
-                try {
-                    jsonInput.put("classifier", bClassifierSelection.getSelectedItem().toString());
-                    jsonInput.put("contextGroup", bContextSelection.getSelectedItem().toString());
-                    JSONArray featuresArray = new JSONArray();
-                    // ??? TBR - for now hardcode features used, to be replaced with selectable list
-                    featuresArray.put("accel.FFT");
-//                    featuresArray.put("AvgFFTy");
-//                    featuresArray.put("AvgFFTz");
-                    jsonInput.put("features", featuresArray);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                Log.v("GETContextButton", jsonInput.toString());
-                bundleServiceInput.putString("JSONInput",jsonInput.toString());
+                // first save default set of inputs
+                bundleServiceInput=bundleInputs();
+                //then add ones specific to this button
                 bundleServiceInput.putString("action","classify");
-                bundleServiceInput.putLong("period", (long)15000);// classify every 15 seconds
+                bundleServiceInput.putLong("period", (long)5000);// classify every 5 seconds
                 bundleServiceInput.putLong("duration", (long)60000); //total duration of 1 minute
 
                 InputIntent.putExtras(bundleServiceInput);
@@ -146,22 +169,10 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                 break;
             case R.id.btnTrainData:
 
-                // Create JSON format as input
-                jsonInput = new JSONObject();
-                try {
-                    jsonInput.put("classifier", bClassifierSelection.getSelectedItem().toString());
-                    jsonInput.put("contextGroup", bContextSelection.getSelectedItem().toString());
-                    JSONArray featuresArray = new JSONArray();
-                    // ??? TBR - for now hardcode features used, to be replaced with selectable list
-                    featuresArray.put("accel.FFT");
-//                    featuresArray.put("AvgFFTy");
-//                    featuresArray.put("AvgFFTz");
-                    jsonInput.put("features", featuresArray);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                Log.v("GETContextButton", jsonInput.toString());
-                bundleServiceInput.putString("JSONInput",jsonInput.toString());
+                // first save default set of inputs
+                bundleServiceInput=bundleInputs();
+                //then add ones specific to this button
+//                Log.d("GETContextButton", jsonInput.toString());
                 bundleServiceInput.putString("action","train");
 
                 InputIntent.putExtras(bundleServiceInput);
@@ -173,6 +184,50 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                 break;
 
         }
+    }
+
+    private Bundle bundleInputs() {
+        // this subroutine bundles the required inputs for calling the classifier and returns it
+        Bundle bundleToSend = new Bundle();
+        bundleToSend.putString("algorithm",bClassifierSelection.getSelectedItem().toString());
+        // save features checked
+        ArrayList<String> featureArrayList = new ArrayList<String>();
+        SparseBooleanArray checked = new SparseBooleanArray();
+        checked.clear();
+        checked = bFeatureSelection.getCheckedItemPositions();
+        int count = 0;
+        for (int i = 0; i < checked.size(); i++)
+        {
+            //added if statement to check for true. The SparseBooleanArray
+            //seems to maintain the keys for the checked items, but it sets
+            //the value to false. Adding a boolean check returns the correct result.
+            if(checked.valueAt(i) == true) {
+                featureArrayList.add(count, allowedFeatures[checked.keyAt(i)]);
+                count++;
+            }
+        }
+
+        bundleToSend.putStringArrayList("features", featureArrayList);
+
+        // repeat for labels
+        ArrayList<String> labelsArrayList = new ArrayList<String>();
+        checked.clear();
+        checked = bLabelsSelection.getCheckedItemPositions();
+        count = 0;
+        for (int i = 0; i < checked.size(); i++)
+        {
+            //added if statement to check for true. The SparseBooleanArray
+            //seems to maintain the keys for the checked items, but it sets
+            //the value to false. Adding a boolean check returns the correct result.
+            if(checked.valueAt(i) == true) {
+                labelsArrayList.add(count, allowedLabels[checked.keyAt(i)]);
+                count++;
+            }
+        }
+
+        bundleToSend.putStringArrayList("contextLabels", labelsArrayList);
+
+        return bundleToSend;
     }
 
     @Override

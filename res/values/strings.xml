@@ -18,4 +18,7 @@
         <item>ToBe</item>
         <item>Added</item>
     </string-array>
+    <string-array name="initial_choice_array">
+        <item>please_initialize</item>
+    </string-array>
 </resources>
