@@ -27,15 +27,15 @@
     <ignored path="ContextRequesterApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/strings.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361762811532" ignored="false" />
-    <file path="/main.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361769176406" ignored="false" />
-    <file path="/ContextRequestAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361772376048" ignored="false" />
+    <file path="/main.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362986099907" ignored="false" />
+    <file path="/ContextRequestAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363074282655" ignored="false" />
     <file path="/fragment.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361618087234" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextServiceAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356719281263" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361796511524" ignored="false" />
-    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362254443469" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362993100855" ignored="false" />
+    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080590581" ignored="false" />
     <file path="/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361645206328" ignored="false" />
     <file path="/context_classifier_model.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356751870899" ignored="false" />
-    <file path="/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361798681765" ignored="false" />
+    <file path="/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362997515683" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_train.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750938758" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_scale.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750971653" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_predict.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750991460" ignored="false" />
@@ -49,18 +49,18 @@
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255584691" ignored="false" />
     <file path="/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255585009" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361784241955" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362254562648" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362254298266" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361625775210" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/Manifest.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361625779006" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080593624" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362997516026" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080037859" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/Manifest.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080041283" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/FFT.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361175391299" ignored="false" />
     <file path="/FFT.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361175376417" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/res/layout/data_collect.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361615007720" ignored="false" />
     <file path="/data_collect.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255202733" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362267982750" ignored="false" />
-    <file path="/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362246649935" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/BuildConfig.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361625779006" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/R.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361625779006" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363070243396" ignored="false" />
+    <file path="/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363070214293" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/BuildConfig.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080041283" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/R.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080041283" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/assets/DataStructure.JSON" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361787135154" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +112,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" line="82" class="org.jingbling.ContextEngine.ContextService" package="org.jingbling.ContextEngine">
+      <breakpoint url="file://$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" line="105" class="org.jingbling.ContextEngine.ContextService.IncomingHandler" package="org.jingbling.ContextEngine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -126,7 +126,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="165" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="191" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -140,77 +140,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="84" class="com.example.ContextRequesterApp.ContextRequestAct$1" package="com.example.ContextRequesterApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="209" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="196" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="227" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="161" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="138" class="com.example.ContextRequesterApp.ContextRequestAct" package="com.example.ContextRequesterApp">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" line="148" class="com.example.ContextRequesterApp.ContextRequestAct$1" package="com.example.ContextRequesterApp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -237,11 +167,9 @@
       <file leaf-file-name="ContextRequestAct.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="54" selection-start="718" selection-end="718" vertical-scroll-proportion="0.47424892">
+            <state line="334" column="90" selection-start="14283" selection-end="14283" vertical-scroll-proportion="0.5317647">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8368#8376#0" expanded="true" />
-                <element signature="e#9182#9190#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -250,16 +178,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntentService.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/app/IntentService.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
+            <state line="14" column="93" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -268,7 +187,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="23" selection-start="5397" selection-end="5397" vertical-scroll-proportion="0.0">
+            <state line="33" column="43" selection-start="1399" selection-end="1409" vertical-scroll-proportion="-3.06">
               <folding />
             </state>
           </provider>
@@ -280,7 +199,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
+            <state line="21" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="-14.28">
               <folding />
             </state>
           </provider>
@@ -316,17 +235,16 @@
         <option value="$PROJECT_DIR$/gen/org/jingbling/ContextEngine/ContextService.java" />
         <option value="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="1" />
+    <option name="width" value="1366" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -688,31 +606,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="1" width="1366" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.8018349" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45552146" sideWeight="0.8350877" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39298245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18336163" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38879457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.322807" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3859649" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2689394" sideWeight="0.21805792" order="3" side_tool="true" content_ui="tabs" x="1030" y="183" width="280" height="87" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.6862385" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18939394" sideWeight="0.83816016" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16183986" sideWeight="0.997006" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19171779" sideWeight="0.8350877" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16491228" sideWeight="0.997006" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67632025" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67632025" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45606062" sideWeight="0.83655536" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -782,21 +700,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="77" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="573" column="81" selection-start="24789" selection-end="24789" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/widget/CompoundButton.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/widget/TextView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="232" column="34" selection-start="9549" selection-end="9549" vertical-scroll-proportion="0.0" />
@@ -834,30 +737,6 @@
         <state line="6" column="13" selection-start="138" selection-end="164" vertical-scroll-proportion="0.25373134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="23" selection-start="5397" selection-end="5397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/app/IntentService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="0" selection-start="2033" selection-end="2033" vertical-scroll-proportion="0.6927711">
@@ -865,20 +744,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/util/SparseBooleanArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="15" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/samples/android-10/ApiDemos/src/com/example/android/apis/app/MessengerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="121" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/samples/android-10/ApiDemos/src/com/example/android/apis/app/MessengerServiceActivities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="32" selection-start="5596" selection-end="5604" vertical-scroll-proportion="-0.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar!/android/app/IntentService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.7733333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="766" selection-end="766" vertical-scroll-proportion="-14.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1399" selection-end="1409" vertical-scroll-proportion="-3.06">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+        <state line="14" column="93" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="54" selection-start="718" selection-end="718" vertical-scroll-proportion="0.47424892">
+        <state line="334" column="90" selection-start="14283" selection-end="14283" vertical-scroll-proportion="0.5317647">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8368#8376#0" expanded="true" />
-            <element signature="e#9182#9190#0" expanded="true" />
           </folding>
         </state>
       </provider>

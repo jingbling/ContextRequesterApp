@@ -23,6 +23,20 @@
                 android:text="   Initialize    "
                 android:textSize="10dp"
                 />
+        <Button
+                android:id="@+id/btnTrainData"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=" Training Mode "
+                android:textSize="10dp"
+                />
+        <Button
+                android:id="@+id/btnResetID"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=" Reset Request "
+                android:textSize="10dp"
+                />
         <!--<Button-->
                 <!--android:id="@+id/btnUnbindService"-->
                 <!--android:layout_width="wrap_content"-->
@@ -37,6 +51,22 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="enter minimum period for classifier:"
+                />
+        <EditText android:id="@+id/classifier_period"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="(integer in seconds)"
+                  android:windowSoftInputMode="adjustResize"/>
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal" >
         <Button
                 android:id="@+id/btnGetContext"
@@ -46,10 +76,10 @@
                 android:textSize="10dp"
                 />
         <Button
-                android:id="@+id/btnTrainData"
+                android:id="@+id/btnStartClassify"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:text=" Training Mode "
+                android:text=" Start Classifier "
                 android:textSize="10dp"
                 />
         <Button
