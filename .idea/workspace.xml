@@ -32,10 +32,10 @@
     <file path="/fragment.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361618087234" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextServiceAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356719281263" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362993100855" ignored="false" />
-    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363445054439" ignored="false" />
+    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448470861" ignored="false" />
     <file path="/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361645206328" ignored="false" />
     <file path="/context_classifier_model.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356751870899" ignored="false" />
-    <file path="/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363425147464" ignored="false" />
+    <file path="/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448514772" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_train.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750938758" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_scale.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750971653" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/com/libSVM/java/svm_predict.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356750991460" ignored="false" />
@@ -49,16 +49,16 @@
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255584691" ignored="false" />
     <file path="/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255585009" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363444901307" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363445361804" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363427176464" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448472700" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448524511" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080037859" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/Manifest.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363443790158" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/FFT.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361175391299" ignored="false" />
     <file path="/FFT.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361175376417" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/res/layout/data_collect.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363406056829" ignored="false" />
     <file path="/data_collect.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363406056829" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363439823575" ignored="false" />
-    <file path="/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363439161880" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363446630455" ignored="false" />
+    <file path="/FeatureCollectionService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363446615296" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/BuildConfig.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363443790158" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/R.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363443790158" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/assets/DataStructure.JSON" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361787135154" ignored="false" />
@@ -181,7 +181,7 @@
       <file leaf-file-name="ContextRequestAct.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="74" selection-start="11685" selection-end="11685" vertical-scroll-proportion="0.61538464">
+            <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="0.2173913">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -620,8 +620,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="1" width="1366" height="727" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="1" width="1366" height="727" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.8018349" order="5" side_tool="false" content_ui="tabs" />
@@ -812,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="74" selection-start="11685" selection-end="11685" vertical-scroll-proportion="0.61538464">
+        <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="0.2173913">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
