@@ -271,6 +271,7 @@ public class ContextRequestAct extends Activity implements View.OnClickListener 
                 Toast.makeText(getApplicationContext(),
                         "Classifier ID reset, request context again to set", Toast.LENGTH_LONG)
                         .show();
+                break;
             case R.id.btnCloseApp:
                 Process.killProcess(Process.myPid());
                 // if bound, unbind
