@@ -27,12 +27,12 @@
     <ignored path="ContextRequesterApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/strings.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361762811532" ignored="false" />
-    <file path="/main.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362986099907" ignored="false" />
+    <file path="/main.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363451119014" ignored="false" />
     <file path="/ContextRequestAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363441777827" ignored="false" />
     <file path="/fragment.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361618087234" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextServiceAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356719281263" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1362993100855" ignored="false" />
-    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448470861" ignored="false" />
+    <file path="/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363449367558" ignored="false" />
     <file path="/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361645206328" ignored="false" />
     <file path="/context_classifier_model.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1356751870899" ignored="false" />
     <file path="/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448514772" ignored="false" />
@@ -49,7 +49,7 @@
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255584691" ignored="false" />
     <file path="/FeatureServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1361255585009" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/LearningServer.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363444901307" ignored="false" />
-    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448472700" ignored="false" />
+    <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363449367558" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/DataCollectionAct.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363448524511" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/AndroidManifest.xml" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363080037859" ignored="false" />
     <file path="$PROJECT_DIR$/../ContextService/gen/org/jingbling/ContextEngine/Manifest.java" changelist="2a3cd843-ce92-41fa-ba20-2a99258e9f1f" time="1363443790158" ignored="false" />
@@ -178,10 +178,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContextRequestAct.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ContextRequestAct.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="0.2173913">
+            <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="-2.6">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,10 +198,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="43" selection-start="1399" selection-end="1409" vertical-scroll-proportion="-3.06">
+            <state line="116" column="64" selection-start="5117" selection-end="5117" vertical-scroll-proportion="0.77916664">
               <folding />
             </state>
           </provider>
@@ -250,8 +250,8 @@
         <option value="$PROJECT_DIR$/../ContextService/src/org/jingbling/ContextEngine/ContextService.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
       </list>
     </option>
   </component>
@@ -620,12 +620,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="1" width="1366" height="727" extended-state="1" />
-    <editor active="false" />
+    <frame x="0" y="1" width="1366" height="727" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.8018349" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45552146" sideWeight="0.61403507" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45552146" sideWeight="0.61403507" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39298245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -800,23 +800,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="-2.6">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1399" selection-end="1409" vertical-scroll-proportion="-3.06">
+        <state line="116" column="64" selection-start="5117" selection-end="5117" vertical-scroll-proportion="0.77916664">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/ContextRequesterApp/ContextRequestAct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="30" selection-start="12670" selection-end="12670" vertical-scroll-proportion="0.2173913">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
   </component>

@@ -114,7 +114,7 @@
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Classifier to use for returning context:"
+                android:text="Select Classifier Algorithm to use:"
                 />
         <Spinner
                 android:id="@+id/classifier_spinner"
